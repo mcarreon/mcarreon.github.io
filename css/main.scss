@@ -215,7 +215,7 @@ header {
     .logo {
 
       a {
-        font-size: font-size(h3-mobile);
+        font-size: font-size(h4-mobile);
         color: white;
         font-weight: bold;
 
@@ -228,6 +228,10 @@ header {
       padding: 15px 0;
       width: 400px;
 
+      li a {
+        font-weight: lighter;
+        color: rgb(207, 207, 207);
+      }
     }
 
     a:hover {
@@ -264,12 +268,17 @@ header {
 
   @include laptop {
     .scroll-icon {
+      
       display: block;
       position: absolute;
       bottom: 50px;
       left: 0;
       right: 0;
       margin: 0 auto;
+    
+      img { 
+        width: 50px;
+      }
     }
   }
 }

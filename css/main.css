@@ -152,13 +152,17 @@ header .logo {
     display: block;
   }
   header .logo a {
-    font-size: 30px;
+    font-size: 20px;
     color: white;
     font-weight: bold;
   }
   header ul {
     padding: 15px 0;
     width: 400px;
+  }
+  header ul li a {
+    font-weight: lighter;
+    color: #cfcfcf;
   }
   header a:hover {
     color: #FFB300;
@@ -207,6 +211,9 @@ header .logo {
     left: 0;
     right: 0;
     margin: 0 auto;
+  }
+  .landing .scroll-icon img {
+    width: 50px;
   }
 }
 
