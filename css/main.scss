@@ -3,44 +3,41 @@
 @font-face {
   font-family: MarvinVisions;
   src: url("../fonts/MarvinVisions-Bold.eot"),
-  url("../fonts/MarvinVisions-Bold.woff") format('woff'),
-  url("../fonts/MarvinVisions-Bold.woff2") format('woff2');
-};
+    url("../fonts/MarvinVisions-Bold.woff") format('woff'),
+    url("../fonts/MarvinVisions-Bold.woff2") format('woff2');
+}
 
-$colors: (
-  primary: #482E53,
-  secondary: #FFB300,
-  gray: #8E8E8E,
+;
+
+$colors: (primary: #482E53,
+secondary: #FFB300,
+gray: #8E8E8E,
 );
 
-$font-sizes: (
-  text-mobile: 15px,
-  text-desktop: 16px,
-  h1-mobile: 60px,
-  h1-desktop: 90px,
-  h2-mobile: 40px,
-  h2-desktop: 55px,
-  h3-mobile: 30px,
-  h3-desktop: 35px,
-  h4-mobile: 20px,
-  h4-desktop: 35px,
-  status: 18px,
-  button: 16px,
+$font-sizes: (text-mobile: 15px,
+text-desktop: 16px,
+h1-mobile: 60px,
+h1-desktop: 90px,
+h2-mobile: 40px,
+h2-desktop: 55px,
+h3-mobile: 30px,
+h3-desktop: 35px,
+h4-mobile: 20px,
+h4-desktop: 35px,
+status: 18px,
+button: 16px,
 );
 
-$paddings: (
-  section-mobile: 35px,
-  section-desktop: 40px,
+$paddings: (section-mobile: 35px,
+section-desktop: 40px,
 );
 
-$fonts: (
-  primary: 'MarvinVisions',
-  secondary:'Raleway',
+$fonts: (primary: 'MarvinVisions',
+secondary:'Raleway',
 );
 
-$line-heights: (
-  mobile: 19px,
-  desktop: 20px,
+$line-heights: (mobile: 19px,
+desktop: 20px,
 );
 
 $border-radius: 40px;
@@ -48,26 +45,40 @@ $skills-radius: 20px;
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
-};
+}
+
+;
+
 @function font-size($font-size) {
   @return map-get($font-sizes, $font-size);
-};
+}
+
+;
+
 @function padding($padding) {
   @return map-get($paddings, $padding);
-};
+}
+
+;
+
 @function font-family($font) {
   @return map-get($fonts, $font);
-};
+}
+
+;
+
 @function line-height($height) {
   @return map-get($line-heights, $height);
-};
+}
+
+;
 
 
 
 
 
 body {
-  
+
   background-color: color(primary);
   color: white;
 
@@ -75,24 +86,34 @@ body {
     background-color: white;
   }
 
-  font-family: font-family(secondary), sans-serif;
-  h1, h2, h3 {
+  font-family: font-family(secondary),
+  sans-serif;
+
+  h1,
+  h2,
+  h3 {
     color: color(primary);
     font-family: font-family(primary), font-family(secondary);
-  };
+  }
+
+  ;
 
   h1 {
     font-size: font-size(h1-mobile);
   }
+
   h2 {
     font-size: font-size(h2-mobile);
   }
+
   h3 {
     font-size: font-size(h3-mobile);
   }
+
   h4 {
     font-size: font-size(h4-mobile);
   }
+
   p {
     line-height: line-height(mobile);
   }
@@ -101,40 +122,47 @@ body {
     h1 {
       font-size: font-size(h1-desktop);
     }
+
     h2 {
       font-size: font-size(h2-desktop);
     }
+
     h3 {
       font-size: font-size(h3-desktop);
     }
+
     h4 {
       font-size: font-size(h4-desktop);
     }
+
     p {
       line-height: line-height(desktop);
     }
   }
-  
+
   a {
     text-decoration: none;
     color: color(secondary);
   }
 
-  .resume-btn form button, .portfolio-buttons div form button, .portfolio-footer div div a button {
+  .resume-btn form button,
+  .portfolio-buttons div form button,
+  .portfolio-footer div div a button {
     transition: .5s;
-    
+
   }
 
-  .resume-btn form button:hover, .portfolio-footer div div a button:hover {
+  .resume-btn form button:hover,
+  .portfolio-footer div div a button:hover {
     color: white;
     background-color: color(primary);
   }
 
   .portfolio-buttons div form button:hover {
-    color: color(primary)!important;
-    background-color: color(secondary)!important;
+    color: color(primary) !important;
+    background-color: color(secondary) !important;
   }
-  
+
 }
 
 .scroll-icon {
@@ -160,6 +188,7 @@ header {
     flex-direction: row;
     justify-content: space-around;
     padding: 20px 0;
+
     li a {
       color: white;
       font-weight: bold;
@@ -171,7 +200,7 @@ header {
   }
 
   @include laptop {
-    
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -184,20 +213,21 @@ header {
     }
 
     .logo {
-      
+
       a {
         font-size: font-size(h3-mobile);
         color: white;
         font-weight: bold;
-        
+
       }
+
       display: block;
     }
 
     ul {
       padding: 15px 0;
       width: 400px;
-    
+
     }
 
     a:hover {
@@ -229,11 +259,18 @@ header {
   }
 
   .scroll-icon {
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    display: none;
+  }
+
+  @include laptop {
+    .scroll-icon {
+      display: block;
+      position: absolute;
+      bottom: 50px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -245,7 +282,7 @@ header {
   img {
     margin: 30px 0 20px;
   }
-  
+
   p {
     width: 80%;
     margin: 0 auto 45px;
@@ -257,7 +294,7 @@ header {
   }
 
   .about-icons {
-    
+
     div {
       display: inline;
 
@@ -269,7 +306,7 @@ header {
   }
 
   .resume-btn {
-    
+
     button {
       padding: 20px 0;
       width: 250px;
@@ -283,12 +320,12 @@ header {
       color: color(primary);
     }
   }
-  
+
   @include laptop {
     width: 60%;
     margin: 0 auto;
 
-    
+
     .about-text {
       margin: 35px auto;
       display: grid;
@@ -353,7 +390,7 @@ header {
         margin: 15px auto;
         text-align: left;
         width: 75%;
-        
+
         li {
           margin-bottom: 5px;
         }
@@ -362,12 +399,12 @@ header {
   }
 
   @include laptop {
-    
+
 
     .skills-columns {
       width: 80%;
       margin: 0 auto;
-      display: flex; 
+      display: flex;
       flex-direction: row;
 
       div {
@@ -402,7 +439,7 @@ header {
         max-width: 350px;
       }
 
-      
+
     }
   }
 }
@@ -410,7 +447,7 @@ header {
 .portfolio {
   text-align: center;
   padding: padding(section-mobile) 0;
-  
+
 
   h2 {
     margin-bottom: 35px;
@@ -422,14 +459,18 @@ header {
     font-weight: bold;
     font-family: font-family(secondary), sans-serif;
   }
+
   h5 {
     color: color(gray);
     font-size: font-size(status);
   }
-  p, li {
+
+  p,
+  li {
     color: black;
-    
+
   }
+
   p {
     margin-top: 25px;
   }
@@ -437,6 +478,7 @@ header {
   ul {
     margin-top: 15px;
     margin-left: 15px;
+
     li {
       margin-top: 10px;
     }
@@ -450,11 +492,14 @@ header {
       font-family: font-family(secondary), sans-serif;
       color: black;
     }
+
     div {
 
 
       margin-top: 25px;
-      p, div {
+
+      p,
+      div {
         display: inline;
       }
 
@@ -484,19 +529,19 @@ header {
     form {
       display: inline;
     }
-    
+
 
     .portfolio-buttons {
-      
-      margin-top: 25px;     
-      
+
+      margin-top: 25px;
+
 
       div {
         display: inline;
       }
 
       img {
-        
+
         width: 24px;
       }
 
@@ -504,7 +549,7 @@ header {
         color: color(gray);
         display: inline;
         font-size: font-size(status);
-        
+
         text-decoration: line-through;
       }
 
@@ -524,22 +569,25 @@ header {
   }
 
   @include laptop {
-    
+
     .portfolio-item {
       width: 80%;
       margin: 0 auto 75px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-    
+
       img {
         max-width: 450px;
       }
+
       .portfolio-item-desc {
         margin-left: 25px;
+
         h4 {
           margin-top: 0;
         }
+
         p {
           width: 500px;
         }
@@ -553,19 +601,20 @@ header {
   }
 
   @include desktop {
-    
+
     .portfolio-item {
       width: 60%;
-      
+
       img {
         max-width: 600px;
       }
 
       .portfolio-item-desc {
-        
+
         h4 {
           margin-top: 0;
         }
+
         p {
           width: 500px;
         }
@@ -580,17 +629,20 @@ footer {
 }
 
 @keyframes bounce {
+
   0%,
   25%,
   50%,
   75%,
   100% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
+
   40% {
-      transform: translateY(-15px);
+    transform: translateY(-15px);
   }
+
   60% {
-      transform: translateY(-12px);
+    transform: translateY(-12px);
   }
 }

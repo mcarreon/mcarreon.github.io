@@ -13,7 +13,9 @@ body .alternate-bg {
   background-color: white;
 }
 
-body h1, body h2, body h3 {
+body h1,
+body h2,
+body h3 {
   color: #482E53;
   font-family: "MarvinVisions", "Raleway";
 }
@@ -61,12 +63,15 @@ body a {
   color: #FFB300;
 }
 
-body .resume-btn form button, body .portfolio-buttons div form button, body .portfolio-footer div div a button {
+body .resume-btn form button,
+body .portfolio-buttons div form button,
+body .portfolio-footer div div a button {
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-body .resume-btn form button:hover, body .portfolio-footer div div a button:hover {
+body .resume-btn form button:hover,
+body .portfolio-footer div div a button:hover {
   color: white;
   background-color: #482E53;
 }
@@ -191,11 +196,18 @@ header .logo {
 }
 
 .landing .scroll-icon {
-  position: absolute;
-  bottom: 50px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  display: none;
+}
+
+@media (min-width: 1220px) {
+  .landing .scroll-icon {
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 }
 
 .about {
@@ -372,7 +384,8 @@ header .logo {
   font-size: 18px;
 }
 
-.portfolio p, .portfolio li {
+.portfolio p,
+.portfolio li {
   color: black;
 }
 
@@ -403,7 +416,8 @@ header .logo {
   margin-top: 25px;
 }
 
-.portfolio .portfolio-footer div p, .portfolio .portfolio-footer div div {
+.portfolio .portfolio-footer div p,
+.portfolio .portfolio-footer div div {
   display: inline;
 }
 
