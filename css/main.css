@@ -282,7 +282,7 @@ header .logo {
   background-color: white;
   margin: 25px auto;
   border-radius: 20px;
-  max-width: 325px;
+  max-width: 300px;
   padding: 25px 0;
 }
 
@@ -313,7 +313,7 @@ header .logo {
 
 @media (min-width: 1220px) {
   .skills .skills-columns {
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
