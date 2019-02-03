@@ -372,6 +372,7 @@ header {
 
       div {
         width: 450px;
+        max-width: 300px;
 
         li {
           padding-bottom: 10px;
@@ -380,6 +381,11 @@ header {
 
       .skill-front {
         height: 475px;
+      }
+
+      .skill-back {
+        margin-left: 25px;
+        margin-right: 25px;
       }
 
       .skill-design {
@@ -391,6 +397,12 @@ header {
   @include desktop {
     .skills-columns {
       width: 60%;
+
+      div {
+        max-width: 350px;
+      }
+
+      
     }
   }
 }

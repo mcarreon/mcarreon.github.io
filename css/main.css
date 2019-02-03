@@ -325,12 +325,17 @@ header .logo {
   }
   .skills .skills-columns div {
     width: 450px;
+    max-width: 300px;
   }
   .skills .skills-columns div li {
     padding-bottom: 10px;
   }
   .skills .skills-columns .skill-front {
     height: 475px;
+  }
+  .skills .skills-columns .skill-back {
+    margin-left: 25px;
+    margin-right: 25px;
   }
   .skills .skills-columns .skill-design {
     height: 350px;
@@ -340,6 +345,9 @@ header .logo {
 @media (min-width: 1580px) {
   .skills .skills-columns {
     width: 60%;
+  }
+  .skills .skills-columns div {
+    max-width: 350px;
   }
 }
 
