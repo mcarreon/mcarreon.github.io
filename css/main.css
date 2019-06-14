@@ -63,6 +63,10 @@ body a {
   color: #FFB300;
 }
 
+body button {
+  cursor: pointer;
+}
+
 body .resume-btn form button,
 body .portfolio-buttons div form button,
 body .portfolio-footer div div a button {
@@ -97,6 +101,7 @@ header {
       grid-template-rows: 1fr;
   background-color: #482E53;
   opacity: 50;
+  z-index: 1;
 }
 
 header div {
@@ -223,8 +228,10 @@ header .logo {
   color: black;
 }
 
-.about img {
-  margin: 30px 0 20px;
+.about .about-img > img {
+  margin: 20px 0 20px;
+  -webkit-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.3);
 }
 
 .about p {
@@ -242,7 +249,7 @@ header .logo {
 }
 
 .about .about-icons div img {
-  margin-top: 20px;
+  margin: 20px 0 20px;
   height: 40px;
 }
 
@@ -275,6 +282,9 @@ header .logo {
     text-align: right;
     margin-right: 25px;
   }
+  .about .about-img img {
+    margin-top: 0px;
+  }
   .about #contact {
     text-align: left;
     margin-left: 25px;
@@ -297,8 +307,8 @@ header .logo {
 }
 
 .skills .skills-columns .skill-column {
-  -webkit-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.3);
 }
 
 .skills .skills-columns div {
@@ -418,6 +428,16 @@ header .logo {
   margin-top: 10px;
 }
 
+.portfolio .icons {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.portfolio .icons .tech-icon, .portfolio .icons a > .tech-icon {
+  height: 32px;
+  margin-right: 5px;
+}
+
 .portfolio .portfolio-footer {
   margin-top: 100px;
 }
@@ -454,9 +474,18 @@ header .logo {
   width: 80%;
 }
 
-.portfolio .portfolio-item img {
+.portfolio .portfolio-item > div:first-child > a > img {
   width: 100%;
   max-width: 650px;
+  -webkit-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.portfolio .portfolio-item > div:first-child > a > img:hover {
+  opacity: .8;
+  background-color: black;
 }
 
 .portfolio .portfolio-item form {
@@ -523,6 +552,9 @@ header .logo {
   .portfolio .portfolio-item .portfolio-image {
     text-align: right;
     margin-right: 25px;
+  }
+  .portfolio .icons .tech-icon, .portfolio .icons a > .tech-icon {
+    height: 64px;
   }
 }
 

@@ -43,6 +43,8 @@ desktop: 20px,
 $border-radius: 40px;
 $skills-radius: 20px;
 
+$box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.3 );
+
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
@@ -145,6 +147,10 @@ body {
     color: color(secondary);
   }
 
+  button {
+    cursor: pointer;
+  }
+
   .resume-btn form button,
   .portfolio-buttons div form button,
   .portfolio-footer div div a button {
@@ -177,6 +183,7 @@ header {
   grid-template-rows: 1fr;
   background-color: color(primary);
   opacity: 50;
+  z-index: 1;
 
   div {
     text-align: center;
@@ -288,8 +295,9 @@ header {
   text-align: center;
   color: black;
 
-  img {
-    margin: 30px 0 20px;
+  .about-img > img {
+    margin: 20px 0 20px;
+    box-shadow: $box-shadow;
   }
 
   p {
@@ -308,7 +316,7 @@ header {
       display: inline;
 
       img {
-        margin-top: 20px;
+        margin: 20px 0 20px;
         height: 40px;
       }
     }
@@ -344,6 +352,10 @@ header {
     .about-img {
       text-align: right;
       margin-right: 25px;
+
+      img {
+        margin-top: 0px;
+      }
     }
 
     #contact {
@@ -373,7 +385,7 @@ header {
   .skills-columns {
 
     .skill-column {
-      box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.75);
+      box-shadow: $box-shadow;
     }
 
     div {
@@ -502,6 +514,18 @@ header {
     }
   }
 
+  .icons {
+    margin-top: 15px;
+    margin-left: 15px;
+
+    .tech-icon, a > .tech-icon {
+      height: 32px;
+      margin-right: 5px;
+    }
+  }
+
+  
+
   .portfolio-footer {
     margin-top: 100px;
 
@@ -539,10 +563,19 @@ header {
     margin: 50px auto;
     width: 80%;
 
-    img {
+
+    & > div:first-child > a > img {
       width: 100%;
       max-width: 650px;
+      box-shadow: $box-shadow;
+      transition: .5s;
+
+      &:hover {
+        opacity: .8;
+        background-color: black;
+      }
     }
+
 
     form {
       display: inline;
@@ -580,7 +613,7 @@ header {
         padding: 15px 0;
         width: 150px;
         margin-right: 25px;
-
+        
       }
 
     }
@@ -614,6 +647,12 @@ header {
       .portfolio-image {
         text-align: right;
         margin-right: 25px;
+      }
+    }
+
+    .icons {
+      .tech-icon, a > .tech-icon {
+        height: 64px;
       }
     }
   }
